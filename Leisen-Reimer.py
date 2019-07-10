@@ -113,7 +113,7 @@ Eur_put_result = LeisenReimerBinomial('P', 'e', 'P', 90, 100, 1, 0.01, 0.01, 0.2
 American_put_result = LeisenReimerBinomial('P', 'a', 'P', 90, 100, 1, 0.01, 0.01, 0.2, 300)
 
 #Print the output of the results
-print('The price of the European call option is equalt to ' +str(Eur_call_result))
-print('The price of the American call option is equalt to ' +str(American_call_result))
-print('The price of the European put option is equalt to ' +str(Eur_put_result))
-print('The price of the American put option is equalt to ' +str(American_put_result))
+print('The price of the European call option is equal to ' +str(Eur_call_result))
+print('The price of the American call option is equal to ' +str(American_call_result))
+print('The price of the European put option is equal to ' +str(Eur_put_result))
+print('The price of the American put option is equal to ' +str(American_put_result))
