@@ -1,5 +1,5 @@
 # Option_Calculations
-Python scripts to calculate a couple of options (financial derivatives) and Implied Volatilities for American and European options
+In this repositories you can find script for calculating the prices and implied volatilities of plain-vanilla options (American and European).
 
 # Leisen-Reimer.py
 With the Leisen-Reimer.py script you are able to calculate the price for European- and American Plain-vanilla options (for options with non-dividend paying underlyings). There is also a functionality to return the delta, gamma and a list of the price, delta and gamma. This code is transalted from a VBA code in the book "The Complete Guide to Option Pricing Formulas" by Espen Gaarder Haug.
