@@ -3,7 +3,7 @@ import numpy as np
 
 
 # Defined functions
-def LeisenReimerBinomial(OutputFlag, AmeEurFlag, CallPutFlag, S, X, T, r, b, v, n):
+def LeisenReimerBinomial(OutputFlag, AmeEurFlag, CallPutFlag, S, X, T, r, c, v, n):
     # This functions calculates the implied volatility of American and European options
     # This code is based on "The complete guide to Option Pricing Formulas" by Espen Gaarder Haug (2007)
     # Translated from a VBA code
@@ -21,7 +21,7 @@ def LeisenReimerBinomial(OutputFlag, AmeEurFlag, CallPutFlag, S, X, T, r, b, v, 
     # X is the strike price
     # T is the time to maturity in years (days/365)
     # r is the risk-free interest rate
-    # b is the cost of carry rate
+    # c is the cost of carry rate
     # v is the volatility
     # n determines the stepsize
 
@@ -41,7 +41,7 @@ def LeisenReimerBinomial(OutputFlag, AmeEurFlag, CallPutFlag, S, X, T, r, b, v, 
         return 'Call or put not defined'
 
     # d1 and d2 formulas of the Black-Scholes formula for European options
-    d1 = (np.log(S / X) + (b + v ** 2 / 2) * T) / (v * np.sqrt(T))
+    d1 = (np.log(S / X) + (c + v ** 2 / 2) * T) / (v * np.sqrt(T))
     d2 = d1 - v * np.sqrt(T)
 
     # The Preizer-Pratt inversion method 1
@@ -57,8 +57,8 @@ def LeisenReimerBinomial(OutputFlag, AmeEurFlag, CallPutFlag, S, X, T, r, b, v, 
     p = hd2
 
     # The up and down factors
-    u = np.exp(b * dt) * hd1 / hd2
-    d = (np.exp(b * dt) - p * u) / (1 - p)
+    u = np.exp(c * dt) * hd1 / hd2
+    d = (np.exp(c * dt) - p * u) / (1 - p)
     df = np.exp(-r * dt)
 
     # Determine if you want to exercise the option or not
