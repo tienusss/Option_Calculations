@@ -17,4 +17,4 @@ With the Leisen-Reimer_IV.py script you are able to calculate the implied volati
 The script requires scipy and numpy.
 
 # Future updates
-In the near future I will upload a Implied Volatility calculator for option with dividend paying underlyings (continous and discrete). Furthermore also a script to calculate the value of barrier options with the Black-Scholes formulas.
+In the near future I will upload a Implied Volatility calculator for option with dividend paying underlyings (discrete). Furthermore also a script to calculate the value of barrier options with the Black-Scholes formulas.
