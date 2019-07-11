@@ -59,7 +59,7 @@ def LeisenReimerBinomial(AmeEurFlag, CallPutFlag, S, X, T, r, c, v, n):
     d = (np.exp(c * dt) - p * u) / (1 - p)
     df = np.exp(-r * dt)
 
-    # Determine if you want to exercise the option or not
+    # Creates the most right column of the three
     max_pay_off_list = []
     for i in n_list:
         i = i.astype('int')
